@@ -1,0 +1,45 @@
+<%include ../partials/header.ejs%>
+
+<!--container for the body -->
+<div class='container'>
+    
+    <!--jumbotron for the header -->
+    <header class="jumbotron">
+            <div class='container'>
+            <h1>Welcome to YelpCamp!</h1>
+             <p>View our hand-picked campgrounds around the world</p>
+            <p>
+                <a class='btn btn-primary btn-lg' href="/campgrounds/new">Add a campground</a>
+            </p>
+        </div>
+    </header>
+    <!--jumbotron for the header -->
+    
+    <!--Rows for the campgrounds-->
+
+    <div class='row' style="display:flex; flex-wrap:wrap;" >
+        
+        <% campgrounds.forEach(function(element){%>
+            <div class='col-md-3 col-sm-6'>
+                <div class='thumbnail' style='text-align:center;' >
+                    <img src=<%=element['image']%>>
+                    <div class='caption'>
+                        <h4><%=element['name']%></h4>
+                    </div>
+                    <p>
+                        <a href="/campgrounds/<%= element.id %>" class='btn btn-primary'>more info</a>
+                    </p>
+                </div>
+            </div>
+        <% })%>
+    </div>  
+        
+        
+        
+</div>
+
+    
+<a href="https://fullstack-bootcamp-fredchettouh.c9users.io/"></a>
+
+
+<% include ../partials/footer.ejs%>

@@ -1,0 +1,54 @@
+<%include partials/header.ejs%>
+
+<div class='container'>
+    <div class='row'>
+        <h1 class='signup'>Sign up Page </h1>
+        
+        <div class='rwd-form'>
+
+            <form action='/register' method="POST">
+                <div class='form-group'>
+                    <label for ='username'>User Name</label>
+                    <input type='text' class='form-control' name='username'>
+                </div>
+                <div class='form-group'>
+                    <label for ='password'>Password</label>
+                    <input type='text' class='form-control' name='password'>
+                </div>
+                <div class='form-group'>
+                    <label for ='firstName'>First Name</label>
+                    <input type='text' class='form-control' name='firstName'>
+                </div>
+                <div class='form-group'>
+                    <label for ='lastName'>Last Name</label>
+                    <input type='text' class='form-control' name='lastName'>
+                </div>
+                <div class='form-group'>
+                    <label for ='email'>Email</label>
+                    <input type='text' class='form-control' name='email'>
+                </div>
+                <div class='form-group'>
+                    <label for ='username'>Avatar</label>
+                    <input type='text' class='form-control' name='name'>
+                </div>
+            
+                <div class='form-group'>
+                    <label for ='avatar'>User Name</label>
+                    <input type='text' class='form-control' name='avatar' placeholder='avatar url'>
+                </div>
+                <div class='form-group'>
+                    <button class= 'btn btn-md btn-primary btn-block'>Sign Up</button>
+                </div>
+                <hr>
+                <a href='/'>back</a>
+                <hr>
+                <div class='form-group'>
+                    <label for ='Admin Code'>Admin Code</label>
+                    <input type='text' class='form-control' name='avatar' placeholder='admins only'>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
+<% include partials/footer.ejs %>
